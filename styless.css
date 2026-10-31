@@ -1,0 +1,1008 @@
+/* =========================================
+   NATALY MINYETY - PROFESSIONAL PORTFOLIO
+   Main Stylesheet
+========================================= */
+
+
+/* =========================================
+   1. COLOR VARIABLES AND GLOBAL SETTINGS
+========================================= */
+
+:root {
+    --navy: #162741;
+    --mauve: #AE7688;
+    --off-white: #F7F5F5;
+    --white: #FFFFFF;
+    --light-pink: #EADDE1;
+    --gray: #52606D;
+    --light-gray: #E8E8E8;
+    --dark-navy: #101D31;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--off-white);
+    color: var(--navy);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   2. NAVIGATION BAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 8%;
+    background-color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 12px rgba(22, 39, 65, 0.08);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--navy);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--mauve);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--mauve);
+}
+
+.nav-button {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: var(--mauve);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   3. HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 600px;
+    padding: 90px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    background:
+        radial-gradient(circle at 85% 20%, rgba(174, 118, 136, 0.15), transparent 30%),
+        var(--off-white);
+}
+
+.hero-content {
+    flex: 1.2;
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: var(--mauve);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 62px);
+    line-height: 1.15;
+    margin-bottom: 15px;
+    color: var(--navy);
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.contact-content h2 span {
+    color: var(--mauve);
+}
+
+.hero h2 {
+    font-size: 17px;
+    color: var(--gray);
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.hero-description {
+    color: var(--gray);
+    font-size: 15px;
+    margin-bottom: 18px;
+    max-width: 620px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.primary-button {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.primary-button:hover {
+    background-color: var(--mauve);
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    border: 2px solid var(--navy);
+    color: var(--navy);
+}
+
+.secondary-button:hover {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.hero-image {
+    flex: 0.8;
+    max-width: 380px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.image-frame {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    padding: 12px;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(22, 39, 65, 0.15);
+}
+
+.image-frame img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 10px;
+}
+
+.image-decoration {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-color: var(--light-pink);
+    border-radius: 50%;
+    right: -35px;
+    bottom: -35px;
+    z-index: 1;
+}
+
+
+/* =========================================
+   4. GENERAL SECTION STYLES
+========================================= */
+
+.section {
+    padding: 90px 10%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.section-heading>p:last-child {
+    color: var(--gray);
+    font-size: 15px;
+}
+
+
+/* =========================================
+   5. ABOUT ME
+========================================= */
+
+.about-section {
+    background-color: var(--white);
+}
+
+.about-content {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.about-text {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.about-text p {
+    color: var(--gray);
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 30px 25px;
+    background-color: var(--off-white);
+    border-radius: 12px;
+    text-align: center;
+    border-bottom: 4px solid var(--mauve);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(22, 39, 65, 0.10);
+}
+
+.feature-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+
+/* =========================================
+   6. PROFESSIONAL EXPERIENCE
+========================================= */
+
+.experience-section {
+    background-color: var(--off-white);
+}
+
+.timeline {
+    max-width: 950px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 39px;
+    width: 2px;
+    background-color: var(--light-pink);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.timeline-logo {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    background-color: var(--white);
+    border: 3px solid var(--light-pink);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.timeline-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.timeline-content {
+    flex: 1;
+    background-color: var(--white);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(22, 39, 65, 0.06);
+}
+
+.timeline-date {
+    display: inline-block;
+    color: var(--mauve);
+    background-color: var(--light-pink);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.timeline-content h3 {
+    color: var(--navy);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+    color: var(--mauve);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.timeline-content ul {
+    padding-left: 20px;
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.timeline-content li {
+    margin-bottom: 7px;
+}
+
+
+/* =========================================
+   7. SELECTED PROJECTS
+========================================= */
+
+.projects-section {
+    background-color: var(--white);
+}
+
+.projects-grid {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background-color: var(--off-white);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--light-gray);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--mauve);
+    box-shadow: 0 12px 25px rgba(22, 39, 65, 0.08);
+}
+
+.project-icon {
+    width: 55px;
+    height: 55px;
+    background-color: var(--light-pink);
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    color: var(--navy);
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tags span {
+    background-color: var(--light-pink);
+    color: var(--navy);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   8. MY SKILLS
+========================================= */
+
+.skills-section {
+    background-color: var(--off-white);
+}
+
+.skills-grid {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(22, 39, 65, 0.05);
+    border-top: 4px solid var(--mauve);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+}
+
+.skill-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.skill-card ul {
+    padding-left: 20px;
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.skill-card li {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   9. LEARNING JOURNEY
+   EDUCATION & CERTIFICATIONS
+========================================= */
+
+.learning-section {
+    background-color: var(--white);
+}
+
+.journey-block {
+    max-width: 1150px;
+    margin: 0 auto 55px;
+}
+
+.journey-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--light-pink);
+    padding-bottom: 15px;
+}
+
+.journey-title-icon {
+    font-size: 28px;
+}
+
+.journey-title h3 {
+    color: var(--navy);
+    font-size: 23px;
+}
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    max-width: 1000px;
+}
+
+.journey-card {
+    background-color: var(--off-white);
+    padding: 27px;
+    border-radius: 12px;
+    border-top: 4px solid var(--mauve);
+    box-shadow: 0 5px 18px rgba(22, 39, 65, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.journey-card:hover {
+    transform: translateY(-5px);
+}
+
+.journey-category {
+    display: block;
+    color: var(--mauve);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+
+.journey-card h4 {
+    color: var(--navy);
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.journey-card p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.journey-detail {
+    display: inline-block;
+    background-color: var(--light-pink);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.certification-card {
+    border-top-color: var(--navy);
+}
+
+
+/* TECHNOLOGY LEARNING CARDS */
+
+.learning-grid {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.learning-card {
+    position: relative;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: var(--off-white);
+    border: 1px solid var(--light-gray);
+}
+
+.learning-card.completed {
+    border-bottom: 4px solid var(--mauve);
+}
+
+.learning-card.upcoming {
+    border-bottom: 4px solid var(--navy);
+}
+
+.learning-number {
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--mauve);
+    opacity: 0.7;
+    margin-bottom: 15px;
+}
+
+.learning-card h3 {
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.learning-card p {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.learning-status {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--mauve);
+}
+
+.learning-message {
+    max-width: 750px;
+    margin: 45px auto 0;
+    text-align: center;
+    padding: 25px;
+    border-left: 4px solid var(--mauve);
+    background-color: var(--off-white);
+    border-radius: 8px;
+}
+
+.learning-message p {
+    color: var(--navy);
+    font-size: 17px;
+    font-style: italic;
+}
+
+
+/* =========================================
+   10. CONTACT SECTION
+========================================= */
+
+.contact-section {
+    padding: 90px 10%;
+    background:
+        radial-gradient(circle at 90% 20%, rgba(174, 118, 136, 0.20), transparent 30%),
+        var(--navy);
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.contact-content .eyebrow {
+    color: var(--light-pink);
+}
+
+.contact-content h2 {
+    color: var(--white);
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contact-content>p:not(.eyebrow) {
+    color: var(--light-pink);
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.contact-details a {
+    color: var(--white);
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--light-pink);
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: var(--mauve);
+    color: var(--white);
+    padding: 13px 30px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: var(--white);
+    color: var(--navy);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   11. FOOTER
+========================================= */
+
+.footer {
+    padding: 25px 8%;
+    background-color: var(--dark-navy);
+    color: var(--white);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer p {
+    font-size: 12px;
+    color: var(--light-pink);
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: var(--white);
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--mauve);
+}
+
+
+/* =========================================
+   12. TABLET RESPONSIVE DESIGN
+========================================= */
+
+@media screen and (max-width: 950px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 70px 6%;
+        gap: 35px;
+    }
+
+    .section {
+        padding: 75px 6%;
+    }
+
+    .contact-section {
+        padding: 75px 6%;
+    }
+
+    .about-cards,
+    .skills-grid,
+    .journey-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   13. MOBILE RESPONSIVE DESIGN
+========================================= */
+
+@media screen and (max-width: 700px) {
+
+    .navbar {
+        position: relative;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .nav-button {
+        display: inline-block;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 75%;
+        max-width: 300px;
+    }
+
+    .image-frame img {
+        height: 330px;
+    }
+
+    .section {
+        padding: 65px 7%;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .about-cards,
+    .projects-grid,
+    .skills-grid,
+    .learning-grid,
+    .journey-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 25px;
+    }
+
+    .timeline-item {
+        gap: 15px;
+    }
+
+    .timeline-logo {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+        padding: 6px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .timeline-content h3 {
+        font-size: 17px;
+    }
+
+    .journey-title h3 {
+        font-size: 19px;
+    }
+
+    .contact-content h2 {
+        font-size: 32px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================
+   14. SMALL MOBILE SCREENS
+========================================= */
+
+@media screen and (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-image {
+        width: 85%;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .timeline-item {
+        gap: 10px;
+    }
+
+    .timeline-logo {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+
+}
